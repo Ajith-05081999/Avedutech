@@ -1,0 +1,165 @@
+.page-container {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+/* Hero */
+.contact-hero {
+  padding: 60px 0 30px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Contact Layout */
+.contact-section {
+  padding: 40px 0 100px;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Info Panel */
+.info-panel {
+  padding: 40px 35px;
+}
+
+.info-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.info-panel > p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.info-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-item strong {
+  display: block;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.info-item p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Form Panel */
+.form-panel {
+  padding: 45px 40px;
+}
+
+.form-panel h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Success */
+.success-message {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--success-color, #27ae60);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin: 0 auto 20px;
+}
+
+.success-message h3 {
+  color: var(--success-color, #27ae60);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.success-message p {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .form-panel {
+    padding: 30px 20px;
+  }
+  .info-panel {
+    padding: 30px 20px;
+  }
+}

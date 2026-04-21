@@ -1,0 +1,87 @@
+.page-container {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.hero-section {
+  padding: 60px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-direction: row-reverse;
+}
+
+.text-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.text-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.text-content p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 15px;
+}
+
+.search-bar .form-control {
+  flex: 1;
+  padding: 16px 20px;
+  font-size: 1.1rem;
+}
+
+.search-bar .btn-primary {
+  padding: 16px 30px;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 900px) {
+  .page-container {
+    padding-top: 80px;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .text-content {
+    padding: 20px 0;
+  }
+  .text-content h1 {
+    font-size: 2.5rem;
+  }
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .text-content h1 {
+    font-size: 2rem;
+  }
+}

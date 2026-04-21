@@ -1,0 +1,199 @@
+.page-container {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.hero-section {
+  padding: 60px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-direction: row-reverse;
+}
+
+.text-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.text-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.text-content p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.benefit-card {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+}
+
+.benefit-card h3 {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.benefit-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Process Section */
+.process-section {
+  padding: 40px 0 100px;
+}
+
+.steps-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.step-card {
+  flex: 1;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.step-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.step-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.step-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.step-arrow {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .page-container {
+    padding-top: 80px;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .text-content {
+    padding: 20px;
+  }
+  .text-content h1 {
+    font-size: 2.5rem;
+  }
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .steps-row {
+    flex-direction: column;
+  }
+  .step-arrow {
+    transform: rotate(90deg);
+  }
+  .action-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content h1 {
+    font-size: 2rem;
+  }
+}

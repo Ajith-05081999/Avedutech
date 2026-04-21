@@ -1,0 +1,67 @@
+<div class="page-container animate-fade-in">
+  <section class="contact-section">
+    <div class="container relative-container">
+
+      <div class="form-container glass-panel">
+        <div class="form-header">
+          <h2>Partner with <span class="gradient-text">AVedutech</span></h2>
+          <p>Are you a premier institution looking to attract top-tier students? Submit your details to integrate into our ecosystem.</p>
+        </div>
+
+        <div *ngIf="isSuccess" class="success-message animate-fade-in">
+          <div class="success-icon">&#10003;</div>
+          <h3>Partnership Request Processed!</h3>
+          <p>Important: Please check the inbox of office&#64;avedutech.com. The first time you use this form, FormSubmit requires you to click "Activate Form" via email to completely whitelist future submissions.</p>
+          <button class="btn-primary reset-btn" (click)="isSuccess = false; collegeForm.reset()">Submit Another Inquiry</button>
+        </div>
+
+        <form *ngIf="!isSuccess" [formGroup]="collegeForm" (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label>College/Institution Name *</label>
+              <input type="text" class="form-control" formControlName="collegeName" placeholder="State University">
+            </div>
+
+            <div class="form-group flex-1">
+              <label>Representative Name *</label>
+              <input type="text" class="form-control" formControlName="representativeName" placeholder="Jane Doe">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label>Designation / Role *</label>
+              <input type="text" class="form-control" formControlName="designation" placeholder="Admissions Director">
+            </div>
+
+            <div class="form-group flex-1">
+              <label>Contact Number *</label>
+              <input type="tel" class="form-control" formControlName="contactNumber" placeholder="+91 98765 43210">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label>Official Email Address *</label>
+              <input type="email" class="form-control" formControlName="email" placeholder="admissions&#64;university.edu">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group flex-1">
+              <label>Message / Partnership Request *</label>
+              <textarea class="form-control custom-textarea" formControlName="message" rows="4" placeholder="Tell us about your campus and student needs..."></textarea>
+            </div>
+          </div>
+
+          <div class="submit-action">
+            <button type="submit" class="btn-primary submit-btn" [disabled]="isSubmitting">
+              {{ isSubmitting ? 'Sending Request...' : 'Become a Partner' }}
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</div>

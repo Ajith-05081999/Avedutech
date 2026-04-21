@@ -1,0 +1,25 @@
+<header class="glass-panel main-header">
+  <div class="container header-content">
+    <div class="logo">
+      <a routerLink="/home" (click)="closeMenu()">
+        <h2>AV<span class="gradient-text">edutech</span></h2>
+      </a>
+    </div>
+    
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="desktop-nav" [class.mobile-open]="isMenuOpen">
+      <ul>
+        <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/leads" routerLinkActive="active" (click)="closeMenu()">Best Colleges</a></li>
+        <li><a routerLink="/trust" routerLinkActive="active" (click)="closeMenu()">Trust & Quality</a></li>
+        <li><a routerLink="/college-contact" routerLinkActive="active" (click)="closeMenu()">For Colleges</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
