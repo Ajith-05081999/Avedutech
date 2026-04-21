@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --primary-color: #3b82f6; /* Premium Blue */
-  --secondary-color: #8b5cf6; /* Violet */
-  --background-dark: #0f172a;
-  --background-card: rgba(30, 41, 59, 0.7);
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --success-color: #10b981;
-  --danger-color: #ef4444;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --glass-bg: rgba(15, 23, 42, 0.6);
+  --primary-color: #2563eb;
+  --secondary-color: #7c3aed;
+  --background-dark: #f0f4ff;
+  --background-card: rgba(255, 255, 255, 0.85);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --success-color: #059669;
+  --danger-color: #dc2626;
+  --border-color: rgba(37, 99, 235, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.7);
 }
 
 * {
@@ -30,9 +30,11 @@ body {
   min-height: 100vh;
   margin: 0;
   -webkit-font-smoothing: antialiased;
-  background-image: radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.15), transparent 25%),
-                    radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%);
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.08), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(124, 58, 237, 0.08), transparent 30%);
 }
+
 
 .app-layout {
   min-height: 100vh;
@@ -46,11 +48,11 @@ body {
 
 .glass-panel {
   background: var(--background-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-color);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px rgba(37, 99, 235, 0.08), 0 1px 3px rgba(0,0,0,0.06);
 }
 
 .btn-primary {
@@ -73,8 +75,8 @@ body {
 
 .btn-secondary {
   background: transparent;
-  color: white;
-  border: 1px solid var(--border-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 1rem;
@@ -84,7 +86,8 @@ body {
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(37, 99, 235, 0.08);
+  transform: translateY(-2px);
 }
 
 h1, h2, h3, h4 {
@@ -103,7 +106,7 @@ h1, h2, h3, h4 {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #60a5fa, #c084fc);
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -135,8 +138,8 @@ h1, h2, h3, h4 {
 .form-control {
   width: 100%;
   padding: 12px 16px;
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid var(--border-color);
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
   border-radius: 8px;
   color: var(--text-primary);
   font-size: 1rem;
@@ -146,7 +149,7 @@ h1, h2, h3, h4 {
 .form-control:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .invalid-feedback {

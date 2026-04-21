@@ -1,6 +1,6 @@
 .main-footer {
-  background: rgba(10, 10, 20, 0.95);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #e8edf8;
+  border-top: 1px solid rgba(37, 99, 235, 0.12);
   margin-top: auto;
 }
 
@@ -38,8 +38,8 @@
 .social-btn {
   width: 42px;
   height: 42px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.15);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -62,7 +62,7 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 20px;
-  color: white;
+  color: var(--text-primary);
   position: relative;
   padding-bottom: 12px;
 }
@@ -97,7 +97,7 @@
 }
 
 .footer-section ul li a:hover {
-  color: white;
+  color: var(--primary-color);
   padding-left: 6px;
 }
 
@@ -117,7 +117,7 @@
 
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(37, 99, 235, 0.1);
   padding: 22px 0;
 }
 
