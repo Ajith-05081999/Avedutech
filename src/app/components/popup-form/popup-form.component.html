@@ -61,6 +61,17 @@
         </div>
       </div>
 
+      <div class="form-group consent-group">
+        <label class="checkbox-container">
+          <input type="checkbox" formControlName="consent">
+          <span class="checkmark"></span>
+          <span class="consent-text">I agree to receive updates, offers, and partner communications, and consent to my data being shared with third parties as per the Privacy Policy.</span>
+        </label>
+        <div class="invalid-feedback" *ngIf="contactForm.get('consent')?.invalid && contactForm.get('consent')?.touched">
+          You must agree to the terms to proceed
+        </div>
+      </div>
+
       <button type="submit" class="btn-primary submit-btn" [disabled]="isSubmitting">
         {{ isSubmitting ? 'Submitting...' : 'Find My College' }}
       </button>

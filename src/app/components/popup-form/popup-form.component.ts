@@ -23,7 +23,8 @@ export class PopupFormComponent implements OnInit {
       phone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       stream: ['', Validators.required],
-      fees: ['', Validators.required]
+      fees: ['', Validators.required],
+      consent: [false, Validators.requiredTrue]
     });
   }
 

@@ -20,7 +20,8 @@ export class ContactComponent {
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
       subject: ['', Validators.required],
-      message: ['', [Validators.required, Validators.minLength(10)]]
+      message: ['', [Validators.required, Validators.minLength(10)]],
+      consent: [false, Validators.requiredTrue]
     });
   }
 
